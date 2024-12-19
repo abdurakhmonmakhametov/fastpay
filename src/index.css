@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-heroText-gradiant{
+    background: linear-gradient(
+        130deg,
+        #272727 0%,
+        #11101d 100%
+    );
+}
+
+.text-gradiant {
+    background: radial-gradient(
+        64.18% 64.18% at 71.16% 35.69%,
+        #c2f0ff 0.89%,
+        #97e5ff 17.23%,
+        #48bcff 42.04%,
+        #1faeff 55.12%,
+        #3381fe 71.54%,
+        #1870fa 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.custom-btn{
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+      background: linear-gradient(0deg, #09295c 0.89%, #1971fa 55.12%, #3683ff 100%);
+  }
+  
+  .custom-btn:hover {
+      color: #fff;
+      opacity: .7;
+  }
+
+  .custom-btn:active{
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+  }
+
+
+
+.pink__gradient{
+    background: linear-gradient(
+        90deg,
+        #f4c4f3 0%,
+        #fc67fa 100%
+    );
+    filter: blur(900px);
+}
+
+.blue__gradient{
+    background: linear-gradient(
+        180deg,
+        rgba(188, 165, 255, 0) 0%,
+        #214d76 100%
+    );
+    filter: blur(123px);
+}
+
+.white__gradient{
+    background: (255, 255, 255, 0.6);
+    filter: blur(750px);
+    z-index: -100;
+}
+
+.box-shadow{
+    box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.bg-black-gradient-2 {
+    background: linear-gradient(
+        -168.39deg,
+        #363636 10%,
+        #2e2e2e 20%,
+        #11101d 100%
+    )
+}
+
+@media (max-width: 640px) {
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: linear-gradient(to top, #fff -278%,#6d6d6d -78%,#11101d 100%);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        z-index: 40;
+    }
+
+    .sidebar-open {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .sidebar-close {
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+}
